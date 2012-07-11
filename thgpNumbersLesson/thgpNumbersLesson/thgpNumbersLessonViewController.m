@@ -51,13 +51,13 @@
         float outputVal = [inputText.text floatValue];
         integerOutputText.text = nil;
         NSLog(@"outputVal = %f", outputVal);
-        decimalOutputText.text = [NSString stringWithFormat:@"%f", outputVal];
+        decimalOutputText.text = [NSString stringWithFormat:@"%.4f", outputVal];
         
     }
     if (buttonInfo.tag == 25) {
         // Integer buttonClicked
-        
-        int outputVal = [inputText.text intValue];
+    
+        int outputVal = (int)[inputText.text floatValue];
         decimalOutputText.text = nil;
         NSLog(@"outputVal = %d", outputVal);
         integerOutputText.text = [NSString stringWithFormat:@"%i", outputVal];
